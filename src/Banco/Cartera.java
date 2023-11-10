@@ -55,4 +55,8 @@ public class Cartera {
 	
 	}
 	
+	public double GananciaTotal() {
+		return gananciaTotal;
+	}
+	
 }
