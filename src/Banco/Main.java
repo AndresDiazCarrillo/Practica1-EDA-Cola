@@ -40,7 +40,9 @@ public class Main {
 						case 2:
 							System.out.println("Ingrese la cantidad de acciones a vender:");
 							int accionesVenta = scanner.nextInt();
-							cartera.VenderAccion(accionesVenta);
+							System.out.println("Ingrese el precio al que quieres vender las acciones:");
+							int cantidadVendidas = scanner.nextInt();
+							cartera.VenderAccion(accionesVenta, cantidadVendidas);
 							break;
 						case 3:
 							System.out.println("Ganancias totales: $" + cartera.GananciaTotal());

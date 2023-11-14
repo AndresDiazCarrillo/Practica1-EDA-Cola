@@ -23,10 +23,9 @@ public class Cartera {
 		pack.offer(paquete);	
 		}
 	
-	public void VenderAccion(int cantidad) throws AccionesInsuficientesException{
+	public void VenderAccion(int cantidad, int precio) throws AccionesInsuficientesException{
 		//mientras la cantidad que meto por teclado (la que quiero vender)
 		//y la cola no vacía (tengo acciones para vender)
-		int venta=0;
 		while (cantidad > 0 && !pack.isEmpty()) {
 			
 			//saco acciones metidas con todos sus datos y lo guardo en paquete
@@ -37,7 +36,7 @@ public class Cartera {
 			//si el número de acciones dispo es menor que la cantidad que quiero vender
 			if (Nacc <= cantidad) {
 				pack.poll();
-				gananciaTotal=gananciaTotal + (25-paquete.getPrecioAccion())*Nacc;
+				gananciaTotal=gananciaTotal + (precio-paquete.getPrecioAccion())*Nacc;
 				cantidad= cantidad-Nacc;
 			}
 			//if Numero de acciones disponibles > cantidad
