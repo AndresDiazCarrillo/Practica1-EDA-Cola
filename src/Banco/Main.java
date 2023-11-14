@@ -9,7 +9,7 @@ import Excepciones.AccionesInsuficientesException;
 
 public class Main {
 	
-	public static void gestionMenu(String[] args) throws IOException{
+	public static void main(String[] args) throws IOException{
 		Queue<PaqueteAccion> cola = new LinkedList<>();
 		Cartera cartera = new Cartera(cola, 0.0);
 		
